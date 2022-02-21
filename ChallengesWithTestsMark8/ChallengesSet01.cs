@@ -37,7 +37,9 @@ namespace ChallengesWithTestsMark8
 
         public long Multiply(long factor1, long factor2)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            var answ = factor1 * factor2;
+            return answ;
         }
 
         public string GetGreeting(string nameOfPerson)
