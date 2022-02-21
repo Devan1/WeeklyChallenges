@@ -44,7 +44,17 @@ namespace ChallengesWithTestsMark8
 
         public string GetGreeting(string nameOfPerson)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            if(nameOfPerson == "")
+            {
+                return "Hello!";
+            }
+            else
+            {
+                var greeting = $"Hello, {nameOfPerson}!";
+                return greeting;
+            }         
+            
         }
 
         public string GetHey()
