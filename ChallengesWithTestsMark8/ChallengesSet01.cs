@@ -18,7 +18,9 @@ namespace ChallengesWithTestsMark8
 
         public double Subtract(double minuend, double subtrahend)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            var answ = minuend - subtrahend;
+            return answ;
         }
 
         public int Add(int number1, int number2)
