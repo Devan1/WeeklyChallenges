@@ -62,10 +62,7 @@ namespace ChallengesWithTestsMark8
             {
                 return 0;
             }
-            double low = numbers.Min();
-            double high = numbers.Max();
-            //var answer = low + high;
-            return low + high;
+            return numbers.Min() + numbers.Max();
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
