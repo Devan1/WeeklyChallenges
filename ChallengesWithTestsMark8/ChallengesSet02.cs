@@ -54,40 +54,74 @@ namespace ChallengesWithTestsMark8
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            if(numbers == null)
-            {
-                return 0;
-            }
-            else if(numbers.Count() < 1)
-            {
-                return 0;
-            }
+            if(numbers == null || numbers.Count() <1) { return 0; }
             return numbers.Min() + numbers.Max();
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            throw new NotImplementedException();
+            if(str1.Length < str2.Length)
+            {
+                return str1.Length;
+            }
+            else
+            {
+                return str2.Length;
+            }
         }
 
         public int Sum(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null) { return 0; }
+            int sum = 0;
+            for(int i = 0; i < numbers.Length; i++) { sum += numbers[i]; }
+            return sum;
         }
 
         public int SumEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            int sum =0;
+            if(numbers == null) { return 0; }
+            foreach(var number in numbers)
+            {
+                if(number % 2 == 0)
+                {
+                    sum += number;
+                }
+            }
+            return sum;
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            if(numbers == null) { return false; }
+            foreach(var num in numbers)
+            {
+                sum += num;
+            }
+            if(sum % 2 != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            int counter = 0;
+            if(number < 0) { return 0; }
+            for(int i = 0; i < number; i++)
+            {
+                if(i % 2 == 1)
+                {
+                    counter++;
+                }
+            }
+            return counter;
         }
     }
 }
