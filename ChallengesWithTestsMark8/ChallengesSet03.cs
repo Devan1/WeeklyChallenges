@@ -16,57 +16,32 @@ namespace ChallengesWithTestsMark8
                     boolCounter++;
                 }
             }
-            if(boolCounter > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            if(boolCounter > 0) { return true; } else return false;
+
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
             if (numbers == null) { return false; }
             var sum = numbers.Sum();
-            if(sum % 2 != 0)
-            {
-                return true;
-            }
-            else return false;
+            if (sum % 2 != 0) { return true; } else return false;
+
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            //throw new NotImplementedException();
-            //must be a way to refactor this to be shorter?????
+
             int upper = 0;
             int lower = 0;
             int number = 0;
             foreach (var chr in password)
             {
-                if (Char.IsUpper(chr))
-                {
-                    upper++;
-                }
-                if (Char.IsLower(chr))
-                {
-                    lower++;
-                }
-                if (Char.IsNumber(chr))
-                {
-                    number++;
-                }
+                if (Char.IsUpper(chr)) { upper++; }
+                if (Char.IsLower(chr)) { lower++; }
+                if (Char.IsNumber(chr)) { number++; }
             }
             if (upper > 0 && lower > 0 && number > 0) { return true; } else return false;
-            //{
-            //    return true;
-            //}
-            //else return false;
-            //{
-            //   return false;
-            //}
+
         }
 
         public char GetFirstLetterOfString(string val)
