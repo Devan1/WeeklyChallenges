@@ -39,37 +39,91 @@ namespace ChallengesWithTestsMark8
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            //must be a way to refactor this to be shorter?????
+            int upper = 0;
+            int lower = 0;
+            int number = 0;
+            foreach (var chr in password)
+            {
+                if (Char.IsUpper(chr))
+                {
+                    upper++;
+                }
+                if (Char.IsLower(chr))
+                {
+                    lower++;
+                }
+                if (Char.IsNumber(chr))
+                {
+                    number++;
+                }
+            }
+            if (upper > 0 && lower > 0 && number > 0) { return true; } else return false;
+            //{
+            //    return true;
+            //}
+            //else return false;
+            //{
+            //   return false;
+            //}
         }
 
         public char GetFirstLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            return val[0];
         }
 
         public char GetLastLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            //int strLength = val.Length - 1;
+            return val[val.Length -1];
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            if(divisor == 0 || dividend == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return dividend / divisor;
+            }
+         
         }
 
         public int LastMinusFirst(int[] nums)
         {
-            throw new NotImplementedException();
+            //int lastNumLoc = nums.Length - 1;
+            int lastNum = nums[nums.Length - 1];
+            int firstNum = nums[0];
+            return lastNum - firstNum;
         }
 
         public int[] GetOddsBelow100()
         {
-            throw new NotImplementedException();
+            List<int> odds = new List<int>();
+            for (int i = 0; i < 100; i++)
+            {
+                if(i % 2 >= 1)
+                {
+                    odds.Add(i);
+                }
+            }  
+            return odds.ToArray();
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < words.Length; i++)
+            {
+                foreach (var word in words)
+                {
+                    words[i++] = word.ToUpper();
+                }
+            }
         }
     }
 }

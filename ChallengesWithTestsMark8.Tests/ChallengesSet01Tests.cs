@@ -10,7 +10,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(10, 10, true)]
         [InlineData(99, 99, true)]
         [InlineData(-10, -10, true)]
-        [InlineData(-1, -1, true)]
+        [InlineData(-1, -1, true)] 
         [InlineData(0, 1, false)]
         [InlineData(4, 7, false)]
         [InlineData(-1, 1, false)]
